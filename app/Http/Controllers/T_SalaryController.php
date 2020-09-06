@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\T_User;
 use App\T_Salary;
+use App\Http\Requests\T_SalaryRequests;
 use Illuminate\Support\Facades\DB;
 
 //use Validator;
@@ -41,7 +42,7 @@ $salary = new T_Salary();
 
 
 
-	   public function sstore(Request $request){
+	   public function sstore(T_SalaryRequests $request){
 	  /*$request->validate([
             'name'  => 'required',
             'salary'      => 'required',

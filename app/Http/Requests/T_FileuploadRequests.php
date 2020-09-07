@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class T_SalaryRequests extends FormRequest
+class T_FileuploadRequests extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,8 @@ class T_SalaryRequests extends FormRequest
     {
         return [
             'name'  => 'required|min:3',
-            'salary'      => 'required'
+            'myfile'      => 'required',
+			'date'      => 'required'
         
         ];
     }
@@ -35,7 +36,8 @@ class T_SalaryRequests extends FormRequest
         return [
             'name.required'  => "Name can't be empty",
             'name.min'  => "Name can't be less than three characters",
-			'salary.required'  => "Salary can't be empty",
+			'myfile.required'  => "File can't be empty",
+			'date.required'  => "Date can't be empty",
 			
         ];
     }

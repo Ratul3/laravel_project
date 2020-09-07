@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>SALARY</title>
+	<link rel="stylesheet" type="text/css" href="{{asset('css/table.css')}}">
 </head>
 <body>
 
@@ -10,10 +11,10 @@
 
 	<table border="1">
 		<tr>
-			<td>id</td>
-			<td>name</td>
-			<td>salary</td>
-			<td>operations</td>
+			<th>id</th>
+			<th>name</th>
+			<th>salary</th>
+			<th>operations</th>
 		</tr>
 
 	@for($i=0; $i != count($users); $i++)

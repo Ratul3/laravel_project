@@ -13,14 +13,14 @@
 		{{csrf_field()}}
 		<table>
 			<tr>
-				<td>name</td>
+				<td>Name</td>
 				<td><input type="text" name="name" value="{{$user['name']}}"></td>
 			</tr>
 
 			
 
 			<tr>
-				<td>salary</td>
+				<td>Salary</td>
 				<td><input type="text" name="salary" value="{{$user['salary']}}"></td>
 			</tr>
 			
@@ -30,6 +30,9 @@
 			</tr>
 		</table>
 	</form>
+	@foreach($errors->all() as $err)
+		{{$err}} <br>
+	@endforeach
 	<br/>
 	<a href="{{route('home.salary')}}">Back</a>
 	</fieldset>

@@ -43,13 +43,7 @@ $salary = new T_Salary();
 
 
 	   public function sstore(T_SalaryRequests $request){
-	  /*$request->validate([
-            'name'  => 'required',
-            'salary'      => 'required',
-            
-        ])->validate();
-*/
-
+	
         $user = new T_Salary();
         $user->name     = $request->name;
         $user->salary    = $request->salary;
@@ -70,7 +64,7 @@ $salary = new T_Salary();
 	
 
 
- function supdate($id, Request $request){
+ function supdate($id, T_SalaryRequests $request){
 
     
 

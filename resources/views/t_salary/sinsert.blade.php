@@ -14,12 +14,12 @@
 		<table>
 
 			<tr>
-				<td>name</td>
+				<td>Name</td>
 				<td><input type="text" name="name" value="{{old('name')}}"></td>
 			</tr>
 
 			<tr>
-				<td>salary</td>
+				<td>Salary</td>
 				<td><input type="text" name="salary" value="{{old('salary')}}"></td>
 			</tr>
 

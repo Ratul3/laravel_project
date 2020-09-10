@@ -23,8 +23,9 @@
 				<td><input type="password" name="password"></td>
 			</tr>
 			<tr>
-				<td></td>
+				
 				<td><input type="submit" name="submit" value="Submit"></td>
+				<td><a href="{{route('registration.index')}}">Registration</a></td>
 			</tr>
 		</table>
 	</form>

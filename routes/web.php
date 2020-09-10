@@ -14,8 +14,9 @@
 Route::get('/', function () {
     echo "index page";
 });
-
-
+Route::get('/t_registration/rules', 'T_RegistrationController@rules')->name('rules.index');
+Route::get('/t_registration', 'T_RegistrationController@insert')->name('registration.index');
+Route::post('/t_registration', 'T_RegistrationController@store');
 Route::get('/t_login', 'T_LoginController@index')->name('login.index');
 Route::post('/t_login', ['uses'=>'T_LoginController@verify']);
 Route::get('/t_logout', ['as'=>'logout.index', 'uses'=>'T_logoutController@index']);

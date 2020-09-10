@@ -14,7 +14,7 @@
 <center><a href="{{route('home.tprofile')}}">Profile</a></center><br/>
 <center><a href="{{route('home.fileupload')}}">Upload Notes</a></center><br/>
 <center><a href="{{route('home.salary')}}">Salary</a></center><br/>
-<center><a href="{{route('logout.index')}}">logout</a></center>
+<center><a href="{{route('logout.index')}}">Logout</a></center>
 
 </body>
 </html>

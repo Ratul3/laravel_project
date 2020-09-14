@@ -16,7 +16,7 @@
 		<table>
 			<tr>
 				<td>Username</td>
-				<td><input type="text" name="username"></td>
+				<td><input type="text" name="username" value="{{old('username')}}"></td>
 			</tr>
 			<tr>
 				<td>Password</td>
@@ -29,7 +29,9 @@
 			</tr>
 		</table>
 	</form>
-
+	@foreach($errors->all() as $err)
+		{{$err}} <br>
+	@endforeach
 	{{session('msg')}}
 	</fieldset>
 </body>

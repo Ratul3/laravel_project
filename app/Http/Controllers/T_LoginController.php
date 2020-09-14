@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\T_User;
+use App\Http\Requests\T_LoginRequests;
 use Illuminate\Support\Facades\DB;
 
 
@@ -14,7 +15,7 @@ class T_LoginController extends Controller
     	return view('t_login.index');
     }
 
-    function verify(Request $request){
+    function verify(T_LoginRequests $request){
     	
 
          /*  $request->session()->put('username', $request->username);

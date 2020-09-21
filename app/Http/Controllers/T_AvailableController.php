@@ -16,11 +16,19 @@ class T_AvailableController extends Controller
 	
 function available(Request $request){
 	
-$data = T_Available::all();
+$List = T_Available::all();
                     
-	   return view('t_available.available')->with('users', $data);
+return view('t_available.available')->with('alist',$List);
  }
-
+function search(Request $req)
+    {
+       
+        
+        $List = T_Available::where('area', 'like', '%'.$req->key.'%')
+                                ->get();
+        
+        return view('t_available.availablelist')->with('alist',$List);
+    }
 
 
 

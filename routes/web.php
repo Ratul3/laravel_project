@@ -39,10 +39,12 @@ Route::middleware(['tsess'])->group(function(){
 		Route::get('/t_home/profile/edit/{id}', 'T_ProfileController@pedit')->name('home.pedit');
 		Route::post('/t_home/profile/edit/{id}', 'T_ProfileController@pupdate');
 		Route::get('/t_home/availabletuition', 'T_AvailableController@available')->name('home.availabletuition');
+		Route::post('/t_home/availabletuition', 'T_AvailableController@search');
 		Route::get('/t_home/offeredtuition', 'T_OfferedController@offered')->name('home.offeredtuition');
 		Route::get('/t_home/studentsinfo', 'T_StudentsController@students')->name('home.studentsinfo');
 		Route::get('/t_home/teachersinfo', 'T_TeachersController@teachers')->name('home.teachersinfo');
-		Route::get('/t_home/ctp', 'T_ProviderController@contact')->name('home.ctp');
+		Route::get('/t_home/ctp', 'T_ProviderController@alltp')->name('home.ctp');
+		Route::post('/t_home/ctp', 'T_ProviderController@search');
 		Route::get('/t_home/ratings', 'T_RatingsController@ratings')->name('home.ratings');
 	    Route::get('/t_home/answer', 'T_ExamController@answer')->name('home.answer');
 		Route::get('/t_home/salary', 'T_SalaryController@salary')->name('home.salary');
